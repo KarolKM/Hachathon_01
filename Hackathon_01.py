@@ -57,9 +57,9 @@ def new_contact(new):
 
 
 def delete_contact(contact):
-    print(contact)
+    show(address_book)
     deletion_choice = int(input("Podaj ID kontaktu do usunięcia: "))
-    contact.pop(deletion_choice + 1)
+    contact.pop(deletion_choice - 1)
     print('Kontakt został usunięty!')
 
     return contact
