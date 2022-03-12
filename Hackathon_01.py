@@ -38,8 +38,11 @@ def generate_contact(book):
 
 
 def show(contact):
-    for i in contact:
-        print(i)
+    for index, row in enumerate(contact):
+        print(index + 1, end=". ")
+        for elem in row:
+            print(elem, end=" ")
+        print()
 
 
 def new_contact(new):
@@ -56,7 +59,7 @@ def new_contact(new):
 def delete_contact(contact):
     print(contact)
     deletion_choice = int(input("Podaj ID kontaktu do usunięcia: "))
-    contact.pop(deletion_choice)
+    contact.pop(deletion_choice + 1)
     print('Kontakt został usunięty!')
 
     return contact
@@ -78,15 +81,3 @@ while user_choice != 4:
         first_screen()
         user_choice = int(input('-----> '))
 print('Koniec programu, dziękuje i życzę dużo zdrowia!! :)')
-
-# print(dic_full_name)
-# for i in range(len(lista_imion)):
-#     dic_name_city[dic_full_name] = lista_miast[i]
-#     i += 1
-# print(dic_name_city)
-# print(contacts['Sopot'])
-
-# if user_choise >= 1 and user_choise < 5:
-#     menu()
-# else:
-#     print("błędna wartość, podaj liczbę przypisaną do opcji w menu")
